@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Welcome Dr.{{session.username}} </h1>
+
+<h1>Order Confirmation</h1>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+<table style="width:100%">
+	<tr>
+		
+		<th>Order ID</th>
+		<th>Vaccine Requested</th>
+		<th>Dosage Requested</th>
+		<th>Approval</th>
+		
+	</tr>
+{% for item in data %}
+	<tr>
+		<form method="POST">
+		<td>{{item['order_id']}}</td>
+		
+		<td>{{item['Vaccine']}}</td>
+		<td>{{item['dosage']}}</td>
+		<td><button name="Key" value="{{item['order_id']}}" style="background-color: limegreen;"><b>Recieved</b></button></td>
+		</form>
+	</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<h1>Artist: {{Name}}</h1>
+<center>
+        {% for item in data %}
+            <tr>
+                <td>
+                    <a href="/play/{{item['Vid_id']}}"><font size="+2">{{item['title']}}</font></a>                   
+                </td>
+                </br>
+            </tr>
+        {% endfor %}
+</center>
+{%endblock%}

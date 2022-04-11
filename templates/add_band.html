@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="jumbotran text-center">
+  <h1>Add Band</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+</div>
+  <form  method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.name,class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.nom,class_="form-control")}}
+    </div>
+       
+    <button type="submit" class="float" name ="Add">Add</button>
+  </form>
+  
+{% endblock %}

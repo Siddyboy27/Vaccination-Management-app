@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Welcome {{session.username}} </h1>
+<center>
+  <div class="container">
+  <a href="/SearchSong" class="btn btn-info" role="button">Search by Song</a>
+  <a href="/SearchArtist" class="btn btn-info" role="button">Search by Artist</a>
+  <a href="/SearchBand" class="btn btn-info" role="button">Search by Band</a>
+  <a href="/SearchAlbum" class="btn btn-info" role="button">Search By Album</a>
+
+</div>
+</center>
+
+{%endblock%}

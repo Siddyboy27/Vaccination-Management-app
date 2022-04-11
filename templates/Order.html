@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<center>
+<form action="{{ url_for('Order') }}" method="POST">
+  	<label for="Vaccine">Choose a vaccine:</label>
+  <select name="Vaccine">
+    <option value="AstraZeneca Oxford Covishield">AstraZeneca Oxford Covishield</option>
+    <option value="Pfizer BioTech">Pfizer BioTech</option>
+    <option value="Covaxin">Covaxin</option>
+    <option value="Johnson and Johnson">Johnson and Johnson</option>
+    <option value=" " selected>Select a Vaccine</option>
+  </select>
+  <br>
+  <label>Number of vials</label>
+  		<input type="number" name="dosage" class="form-control" value={{request.form.dosage}} placeholder="Enter the number of vials">
+  	<input type="submit" class="btn btn-primary">
+  </form>
+</center>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Welcome Dr.{{session.username}} </h1>
+<hr>
+</br>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+<table style="width:100%">
+	<tr>
+		
+		<th>Passport Number</th>
+		<th>Date of 1st dose</th>
+		<th>Date of 2nd dose</th>
+		<th>Vaccine</th>
+		<th>Dose Taken</th>
+		<th>Approval</th>
+		
+	</tr>
+{% for item in data %}
+	<tr>
+		<form method='POST'>
+		<td>{{item['P_id']}}</td>
+		<td>{{item['Dose_1']}}</td>
+		<td>{{item['Dose_2']}}</td>
+		<td>{{item['Vaccine']}}</td>
+		<td>{{item['dose']}}</td>
+		<td><button name="Key" value="{{item['P_id']}}" style="background-color: limegreen;"><b>Approve</b></button></td>
+		</form>
+	</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

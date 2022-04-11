@@ -1,0 +1,17 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Staff/Admin Login</h1>
+  <form action="" method="POST">
+  	<div class="form-group">
+  		<label>Passport Number</label>
+  		<input type="text" name="P_id" class="form-control" value={{request.form.P_id}}>
+  	</div>
+  	<div class="form-group">
+  		<label>Staff ID</label>
+  		<input type="password" name="D_id" class="form-control" value={{request.form.D_id}}>
+  	</div>
+  	<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  {% endblock %}
+

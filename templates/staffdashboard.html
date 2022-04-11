@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Welcome Dr.{{session.username}} </h1>
+<hr>
+
+<h2>Vials left</h2>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+<table style="width:100%">
+	<tr>
+		{% for item in data %}
+		
+			<th>{{item['Vaccine_name']}}</th>
+		{% endfor %}
+	</tr>
+
+	<tr>
+		{% for item in data %}
+		
+			<th>{{item['Vials']}}</th>
+		{% endfor %}
+	</tr>
+</table>
+
+</br>
+<div class="container">
+<a href="/ConfirmVaccine" class="btn btn-info" role="button">Vaccination Confirmation</a>
+
+<a href="/Order" class="btn btn-info" role="button">Request Vaccines</a>
+<a href="/OrderConfirmation" class="btn btn-info" role="button">Confirm Order Requests</a>
+</div>
+{% endblock %}

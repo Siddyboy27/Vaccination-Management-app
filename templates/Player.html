@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<center>
+	<h1>{{Name}} by {{Art}} </h1>
+	<h1>Band: {{band}}</h1>
+	<audio controls autoplay>
+		<source src="/static/music/{{Name}}.mp3" type="audio/mpeg">
+		
+	</audio>
+</center>
+ {% endblock %}

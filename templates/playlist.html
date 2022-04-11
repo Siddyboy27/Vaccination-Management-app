@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1><a href="/create_playlist"><font size="+2">Create a new playlist</font></a></h1>
+    <center>
+        <font size="+4">{{msg1}}</font>
+    </br>
+    
+        {% for item in result %}
+            <tr>
+                <td>
+                    <a href="/play_list/{{item['playlist_id']}}"><font size="+2">{{item['title']}}</font></a>                   
+                </td>
+                </br>
+            </tr>
+        {% endfor %}
+    </center>    
+{% endblock %}

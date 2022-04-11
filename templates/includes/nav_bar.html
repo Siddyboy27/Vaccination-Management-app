@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light" style="background-color:powderblue;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {% if session.logged_in %}
+        
+        <li class="active"><a href="/logout">logout</a><li>
+      
+      {% endif %}
+
+    </ul>
+   
+
+</nav>
+</div>

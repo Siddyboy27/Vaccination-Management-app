@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+body {
+   margin: 0;
+}
+
+</style>
+
+<div class="jumbotran text-center">
+	<h1>Vaccination Management</h1>
+	<p class="lead"> Citizen Portal</p>
+	{% if session.logged_in==NULL %}
+	<a href="/Register" class="btn btn-primary btn-lg">Register</a>
+	<a href="/login" class="btn btn-primary btn-lg">Login</a>
+	{% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+body {
+   margin: 0;
+}
+
+</style>
+
+<div class="jumbotran text-center">
+	<h1>Vaccination Management</h1>
+	<p class="lead"> The Vaccination traccker app that makes the process easy</p>
+	{% if session.logged_in==NULL %}
+	<a href="/Citizen" class="btn btn-primary btn-lg">Citizen</a>
+	<a href="/stafflogin" class="btn btn-primary btn-lg">Doctor/Admin Staff</a>
+	{% endif %}
+</div>
+
+{% endblock %}

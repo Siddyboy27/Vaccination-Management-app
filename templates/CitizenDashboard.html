@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Welcome,{{session.username}} </h1>
+<hr>
+
+<center>
+	<div class="div-1" style={{BG}}>
+		<h1><font color="white">{{session.username}}</font></h1>
+	</div>
+	</br>
+	<h4><font color={{Col}}>{{Note}}</font></h4>
+	<br>
+	{% if data['doses']==0 %}
+		<a href="/VaccineRegisteration" class="btn btn-primary btn-lg">Vaccine Registeration</a>
+	{% endif %}
+
+
+	<style>
+		table, th, td {
+		  border: 1px solid black;
+		}
+		th, td {
+		  padding: 15px;
+		}
+	</style>
+
+	{% if data['doses']==1 %}
+	<table style="width:100%">
+		<tr>
+			<th scope="row">Name</th>
+			<td>{{data['name']}}</td>
+		</tr>
+		<tr>
+			<th scope="row">Vaccine</th>
+			<td>{{Vac['Vaccine_name']}}</td>
+		</tr>
+		<tr>
+			<th scope="col">Date of 1st dose</th>
+			<td>{{data['DO1']}}</td>
+		</tr>
+	</table>
+
+	{% endif %}
+
+	{% if data['doses']==2 %}
+	<table style="width:100%">
+		<tr>
+			<th scope="row">Name</th>
+			<td>{{data['name']}}</td>
+		</tr>
+		<tr>
+			<th scope="row">Vaccine</th>
+			<td>{{Vac['Vaccine_name']}}</td>
+		</tr>
+		<tr>
+			<th scope="col">Date of 1st dose</th>
+			<td>{{data['DO1']}}</td>
+		</tr>
+		<tr>
+			<th scope="col">Date of 2nd dose</th>
+			<td>{{data['DO2']}}</td>
+		</tr>
+	</table>
+
+	{% endif %}
+
+</center>
+
+
+
+{% endblock %}

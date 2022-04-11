@@ -1,0 +1,17 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Citizen Login</h1>
+  <form action="" method="POST">
+  	<div class="form-group">
+  		<label>Passport Number</label>
+  		<input type="text" name="P_id" class="form-control" value={{request.form.P_id}}>
+  	</div>
+  	<div class="form-group">
+  		<label>Passowrd</label>
+  		<input type="password" name="Password" class="form-control" value={{request.form.D_id}}>
+  	</div>
+  	<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  {% endblock %}
+
